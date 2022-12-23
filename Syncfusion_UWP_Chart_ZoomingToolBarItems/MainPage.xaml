@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Syncfusion_UWP_Chart_ZoomingToolBarItems.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Syncfusion_UWP_Chart_ZoomingToolBarItems"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.DataContext>
+            <local:ViewModel />
+        </Grid.DataContext>
+
+        <chart:SfChart Margin="20">
+            <chart:SfChart.PrimaryAxis>
+                <chart:DateTimeAxis LabelFormat="MMM, yyyy"/>
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis />
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Behaviors>
+                <chart:ChartZoomPanBehavior ToolBarItems="ZoomIn,ZoomOut,SelectZooming"
+                                            EnableZoomingToolBar="True" 
+                                            EnableSelectionZooming="True" />
+            </chart:SfChart.Behaviors>
+
+
+            <chart:FastLineSeries ItemsSource="{Binding Data}"
+                                  XBindingPath="Date"
+                                  YBindingPath="Load"/>
+        </chart:SfChart>
+    </Grid>
+</Page>
