@@ -37,3 +37,7 @@ You can show or hide the zooming toolbar by using the [EnableZoomingToolBar](htt
 ## <a name="troubleshooting"></a>Troubleshooting ##
 ### Path too long exception
 If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
+
+## Knowledge base
+
+**KB article:**[How to show or hide zooming toolbar items in UWP Chart?](https://support.syncfusion.com/kb/article/12179/how-to-show-or-hide-zooming-toolbar-items-in-uwp-chart)
